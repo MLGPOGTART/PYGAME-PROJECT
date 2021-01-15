@@ -21,29 +21,28 @@ black = (0, 0, 0)
 
 
 ############################### MEDIA ##################################
-logo = pygame.image.load('Logo.png')
-title_bkgrd = pygame.image.load("Main Menu Background.jpg")
-tutorial_bkrgrd = pygame.image.load('tutorial_background.jpg')
-play_bkrgrd = pygame.image.load('first level.png')
+logo = pygame.image.load('Logo.png') # 32x32 icon in the top left
+title_bkgrd = pygame.image.load("Main Menu Background.jpg") # title screen background
+tutorial_bkrgrd = pygame.image.load('tutorial_background.jpg') # tutorial screen background
+play_bkrgrd = pygame.image.load('first level.png') # First Level background
 
 
-player = Sprite("player.png", 640, 660)
-play_button = Sprite('Play_Button.png', 415, 630)
-tutorial_button = Sprite('Tutorial_Button.png', 640, 630)
-quit_button = Sprite('Quit_Button.png', 865, 630)
+player = Sprite("player.png", 640, 660) # player sprite
+play_button = Sprite('Play_Button.png', 415, 630)# play button sprite 
+tutorial_button = Sprite('Tutorial_Button.png', 640, 630)# tutorial button sprite 
+quit_button = Sprite('Quit_Button.png', 865, 630) # quit button sprite 
 
-bkgd_music = pygame.mixer.music.load('sword man.wav')
-pygame.mixer.music.play(loops=-1, start=0.0)
-pygame.mixer.music.set_volume(.06)
+bkgd_music = pygame.mixer.music.load('sword man.wav') # Game Backround Music
+pygame.mixer.music.play(loops=-1, start=0.0) # Loops backround music infinitely 
+pygame.mixer.music.set_volume(.06) # sets volume to not be blaring 
 
-menu_click = pygame.mixer.Sound('click sound.wav')
+menu_click = pygame.mixer.Sound('click sound.wav') # button clicking sound
+
+# tutorial_text = Text(screen, font, 'GAMING TIME', white, 640, 360) Was going to be text
+pygame.display.set_icon(logo) 
 
 
-tutorial_text = Text(screen, font, 'GAMING TIME', white, 640, 360)
-pygame.display.set_icon(logo)
-
-
-'''SETUP CODE'''
+############## Setup and Functionality ###########
 class Game:
     def __init__(self):
         self.run = True
@@ -97,7 +96,7 @@ class Game:
                     self.title = True
 
 
-################ 
+################ GAME LEVEL METHODS ###############
 
     def first_level(self):
         screen.blit(play_bkrgrd, (0,0))

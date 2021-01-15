@@ -10,7 +10,6 @@ class Sprite(pygame.sprite.Sprite):
         self.h = self.image.get_rect().height
         self.x = int(x - self.w/2)
         self.y = int(y - self.h/2)
-        self.gravity = float(.2)
         self.v = 8
         self.y_velocity = 0
         self.is_visible = True
