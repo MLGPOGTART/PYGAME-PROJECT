@@ -32,7 +32,7 @@ play_button = Sprite('Play_Button.png', 415, 630)# play button sprite
 tutorial_button = Sprite('Tutorial_Button.png', 640, 630)# tutorial button sprite 
 quit_button = Sprite('Quit_Button.png', 865, 630) # quit button sprite 
 
-bkgd_music = pygame.mixer.music.load('sword man.wav') # Game Backround Music
+bkgd_music = pygame.mixer.music.load('sword man.mp3') # Game Backround Music
 pygame.mixer.music.play(loops=-1, start=0.0) # Loops backround music infinitely 
 pygame.mixer.music.set_volume(.06) # sets volume to not be blaring 
 
